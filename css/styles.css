@@ -1,0 +1,870 @@
+*{
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 15px;
+  scroll-behavior: smooth;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+/* Headings */
+.headings{
+  font-family: "Playwrite GB J", cursive;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 40px;
+  text-align: center;
+  scroll-margin-top: 80px
+
+}
+
+
+/* Navbar section */
+.nav-bar{
+    /* sticking it up XD */
+    position: sticky;
+    top:20px;
+    z-index: 9999;
+
+    width: fit-content;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 40px;
+    margin: 20px auto;
+
+    /* For Blurry background */
+    background-color: rgba(200, 200, 200, 0.15);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+#menu-icon {
+    display: none;
+}
+
+.nav_bar_list{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0 25px;
+    height: 100%;
+}
+
+.nav-bar ul {
+    list-style: none;
+}
+
+.influencer {
+  font-family: "Lavishly Yours", cursive;
+  font-size: 40px;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 5px;
+  
+  /* Default State */
+  color: #000000; /* Black */
+  display: inline-block;
+  transition: color 0.3s ease;
+  
+
+  background: linear-gradient(45deg, #bf953f, #fcf6ba, #bf953f);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.influencer:hover {
+  color: transparent;
+  animation: shimmer 1s linear forwards;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -0% 0; }
+}
+
+
+/* Hero Section */
+.Hero_Screen{
+
+  scroll-margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  align-items: center;
+  
+}
+
+.Hero_Image{
+  width: 250px;
+  height: 350px;
+  border-radius: 20px;
+  /* clip-path: inset(0 0 0 0 round 50px 0); */
+  
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+
+}
+.Hero_Screen img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.Hero_About{
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Hero_About h1{
+  font-family: "Lavishly Yours", cursive;
+  font-size: 50px;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 5px;
+  margin: 10px 0;
+}
+
+.Hero_About p{
+  text-align: center;
+}
+
+
+
+/* TravelBlog section */
+.tour_container_profile{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.tours{
+    position: relative;
+    width: 350px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.tours img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
+
+/* Glass overlay */
+.overlay{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(80, 80, 80, 0.15);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    color: white;
+    text-align: center;
+
+    transition: all 0.4s ease;
+}
+
+.overlay h2{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.overlay p{
+    font-size: 18px;
+}
+
+/* Hover effects */
+.tours:hover .overlay{
+    opacity: 0;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+}
+
+.tours:hover img{
+    transform: scale(1);
+}
+
+
+
+
+
+/* Gallery */
+.gallery_container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+.gallery_img_container{
+  position: relative;
+  width: 250px;
+  height: 35  0px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.gallery_img_container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+
+}
+
+.gallery_img_container:hover img{
+    transform: scale(1);
+}
+
+.gallery_img_container {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  border-radius: 30px;
+  overflow: hidden;
+
+}
+
+.gallery_img_overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40%; 
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  text-align: center;
+}
+
+.gallery_img_overlay p {
+  background-color: rgba(200, 200, 200, 0.15);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(10px);
+  margin: 0;
+  padding: 5px 15px; 
+  width: 100%; 
+  font-weight: 700;
+}
+
+
+
+/* Connect */
+
+.connect_container {
+    display: flex;
+    justify-content: center; 
+    gap: 30px;              
+    padding: 40px;
+    flex-wrap: wrap;         
+  }
+.connection {
+    width: 300px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.connection:hover {
+    transform: translateY(-10px);
+}
+
+.connection img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.connection hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 15px 0;
+}
+
+
+
+
+
+
+
+/* Tours */
+.duration{
+    font-family: "Playwrite GB J", cursive;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 30px;
+  text-align: center;
+  scroll-margin-top: 80px
+}
+.tour_container{
+    width: 100%;
+    height: 70vh;
+    margin: 0 auto;
+
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.tour_hero_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.tour_container::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 1;
+}
+
+
+.tour_content{
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    padding: 40px;
+    color: white;
+}
+
+.tour_description{
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+
+/* Timeline */
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #333;
+  top: 0; bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.container {
+  padding: 10px 40px;
+  position: relative;
+  width: 400px;
+  height: 300px;
+  display: flex;
+}
+
+
+
+.left { left: 0; text-align: right;}
+.right { left: 50%; }
+
+.content {
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  position: relative;
+  width: 100%;
+}
+
+
+.right .mode-popup {
+  position: absolute;
+  top: 15px;
+  right: -30px;
+  background: #ff9800;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  z-index: 5;
+}
+
+.left .mode-popup {
+  position: absolute;
+  top: 15px;
+  left: -30px;
+  background: #ff9800;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  z-index: 5;
+}
+
+.content::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+    border-radius: 6px;
+}
+
+.notes, .links {
+  margin-top: 10px;
+  font-size: 0.9em;
+  border-top: 1px solid #ddd;
+  padding-top: 5px;
+}
+
+
+.content .bg-img{
+    position: absolute;
+    inset: 0;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    z-index: 0;
+    opacity: 0.35;
+}
+
+.content h3,
+.content h4,
+.content p,
+.content .notes,
+.content .links,
+.content .links a{
+    position: relative;
+    z-index: 4;
+    color: white;
+}
+
+
+.content::before,
+.content .bg-img,
+.content h3,
+.content h4,
+.content p,
+.content .notes,
+.content .links,
+.content .links a,
+.content .mode-popup{
+    transition: all 0.4s ease;
+}
+
+
+.content:hover .bg-img{
+    opacity: 1;
+}
+
+
+.content:hover::before{
+    opacity: 0;
+}
+
+
+.content:hover h3,
+.content:hover h4,
+.content:hover p,
+.content:hover .notes,
+.content:hover .links,
+.content:hover .links a,
+.content:hover .mode-popup{
+    opacity: 0;
+}
+
+
+
+
+/* Tour Images */
+.tour_images{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 30px 10px;
+}
+
+.tour_image_container{
+  width: 250px;
+  height: 300px;
+  /* clip-path: inset(0 0 0 0 round 50px 0); */
+  border-radius: 20px;
+  /* clip-path: inset(0 0 0 0 round 50px 0); */
+  
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.tour_image_container img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.tour_image_container img:hover{
+  transform: scale(1);
+}
+
+
+
+
+
+
+
+
+
+/* Tour Catalog */
+
+.catalog_desc{
+  font-family: "Playwrite GB J", cursive;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 20px;
+  text-align: center;
+  scroll-margin-top: 80px;
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+
+
+/* ====================================================
+   MOBILE RESPONSIVE STYLES (Screen widths <= 768px)
+   ==================================================== */
+@media screen and (max-width: 768px) {
+
+.influencer {
+  font-family: "Lavishly Yours", cursive;
+  font-size: 30px;
+  padding: 0;}
+
+#menu-icon {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: black;
+    }
+
+    /* 1. Reset the main container to auto-expand */
+   .nav-bar {
+        height: 50px; /* Removed fixed 40px */
+        /* min-height: 55px; */
+        width: 80%;
+        padding: 0;
+        display: flex;
+        align-items: flex-start;
+        transition:  height 0.5s ease-in-out, padding 0.5s ease, background-color 0.3s ease;
+    }
+
+    /* 2. Format the flex container */
+    .nav_bar_list {
+        display: flex;
+        flex-wrap: wrap; 
+        align-items: center; /* Vertically centers the text and icon */
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+        
+        background: transparent;
+        border: none;
+
+    }
+
+    /* 3. Keep Vaishnavi on top left */
+    .nav_bar_list > a:nth-of-type(1) {
+        order: 1;
+        margin: 0;
+    }
+
+    /* 4. Keep Menu Icon on top right */
+    #menu-icon {
+        display: block;
+        order: 2;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: black;
+        padding: 5px; /* Makes it easier to tap */
+    }
+
+    /* 5. Hide the rest of the links by default */
+    .nav_bar_list > a:nth-of-type(n+2) {
+        display: none; 
+        order: 3;
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    /* =========================================
+       ACTIVE STATE (When Hamburger is clicked)
+       ========================================= */
+    .nav-bar.active {
+        height: auto;
+        border-radius: 20px;
+        padding-bottom: 25px;
+        background-color: #ffffff; /* Solid white background */
+        
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); 
+    }
+
+    /* Reveal the links */
+    .nav-bar.active .nav_bar_list > a:nth-of-type(n+2) {
+        display: block;
+    }
+
+
+  /* 3. Hero Section (Stacked Column) */
+  .Hero_Screen {
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px 15px;
+    text-align: center;
+  }
+
+  .Hero_Image {
+    width: 220px;
+    height: 300px;
+  }
+
+  .Hero_About {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .Hero_About h1 {
+    font-size: 38px;
+  }
+
+  .Hero_About p {
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 0 10px;
+  }
+
+  /* 4. Tours Section (Touch-Friendly Horizontal Snap Carousel) */
+  .tour_container_profile {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 15px;
+    padding: 10px 20px 20px 20px;
+    justify-content: flex-start; /* Allows smooth scrolling from the left */
+
+    scrollbar-width: thin;
+    /* scrollbar-color: rgba(0, 0, 0, 0.35) rgba(0, 0, 0, 0.08); */
+  }
+
+
+  .tour_container_profile::-webkit-scrollbar {
+    display: block;          /* Ensures scrollbar is visible */
+    height: 2px;             /* Height for horizontal slider track */
+  }
+
+  .tour_container_profile::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    margin: 0 20px;
+  }
+
+  .tour_container_profile::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+  }
+
+  .tour_container_profile::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.55);
+  }
+
+  .tours {
+    flex: 0 0 80vw; /* Shows active card + sneak peek of next card */
+    max-width: 320px;
+    height: 400px;
+    scroll-snap-align: center;
+  }
+
+  /* Subtle persistent contrast on mobile so text remains readable without hover */
+  .overlay {
+    background: rgba(0, 0, 0, 0.35);
+  }
+
+  .overlay h2 {
+    font-size: 24px;
+  }
+
+  .overlay p {
+    font-size: 15px;
+  }
+
+  /* 5. Gallery Section (Clean 2-Column Grid) */
+.gallery_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    gap: 12px 0; 
+    padding: 0 10px;
+  }
+
+  /* 1. Rule for Catalog Page (Wrapped in <a> tags) */
+  .gallery_container > a {
+    display: block; 
+    width: calc(50% - 5px); 
+    text-decoration: none;
+  }
+  
+  .gallery_container > a > .gallery_img_container {
+    width: 100%; /* Fills the <a> tag */
+  }
+
+  /* 2. Rule for Home Page (Directly inside the gallery, no <a> tags) */
+  .gallery_container > .gallery_img_container {
+    width: calc(50% - 5px); 
+  }
+
+  /* 3. Shared Styles for the Image Boxes */
+  .gallery_img_container {
+    height: 220px;
+    border-radius: 18px;
+    position: relative;
+    overflow: hidden; 
+  }
+
+  .gallery_img_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+  }
+
+  .gallery_img_overlay p {
+    font-size: 12px;
+    padding: 4px 8px;
+    margin: 0;
+  }
+
+  
+  /* 6. Connect Section */
+  .connect_container {
+    padding: 20px 15px;
+    gap: 15px;
+  }
+
+  .connection {
+    width: 100%;
+    max-width: 340px;
+    padding: 18px;
+  }
+
+  .gallery_container .gallery_img_container:nth-child(n + 9) {
+    display: none;
+  }
+
+
+
+
+  /* Tours */
+
+  /* 1. Hero Section Adjustments */
+  .duration {
+    font-size: 24px; /* Scaled down for mobile */
+  }
+
+  .tour_container {
+    height: 60vh; /* Slightly shorter on mobile */
+  }
+
+  .tour_content {
+    padding: 20px;
+  }
+
+  .tour_description {
+    width: 100%; /* Overrides the hardcoded 800px */
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  /* 2. Timeline Spine (Moved to the left) */
+  .timeline::after {
+    left: 20px; /* Moves the central line to the left edge */
+    margin-left: 0;
+  }
+
+  /* 3. Timeline Cards (All stacked on the right) */
+  .container {
+    width: 100%; /* Overrides the hardcoded 400px */
+    padding-left: 50px; /* Gives room for the left timeline spine */
+    padding-right: 15px;
+    height: auto; /* Lets content dictate height instead of forcing 300px */
+    min-height: 250px; /* Keeps images looking good */
+    box-sizing: border-box;
+  }
+
+  /* Force both left and right cards to behave exactly the same */
+  .left, .right {
+    left: 0;
+    text-align: left; /* Fixes the text-align: right from the desktop .left class */
+  }
+
+  /* 4. Fix Mode Popups (Ensures they don't overlap the timeline spine) */
+  .left .mode-popup,
+  .right .mode-popup {
+    left: auto;
+    right: 10px; /* Pulls it inside the card slightly so it doesn't cause horizontal scroll */
+    top: 10px;
+  }
+
+  /* 5. Tour Images (Responsive 2-column grid) */
+  .tour_images {
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  .tour_image_container {
+    width: calc(50% - 10px); /* Creates a neat 2-column split */
+    height: 200px;
+  }
+
+
+  /* Tour catalogue */
+  /* Make the catalog description responsive */
+  .catalog_desc {
+      width: 100%; /* Overrides the fixed 600px */
+      padding: 0 20px; /* Keeps the text from touching the absolute edges of the screen */
+      box-sizing: border-box;
+      font-size: 16px; /* Optional: scales down the cursive font slightly so it fits better on small screens */
+  }
+}
