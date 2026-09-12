@@ -789,7 +789,7 @@ a {
     padding: 18px;
   }
 
-  .gallery_container .gallery_img_container:nth-child(n + 9) {
+  .gallery_container > a:nth-child(n + 9) .gallery_img_container {
     display: none;
   }
 
